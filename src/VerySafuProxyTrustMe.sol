@@ -17,6 +17,7 @@ contract VerySafuProxyTrustMe {
     
     // storage slot where the upgrade-optIn boolean will be stored.
     // This is the keccak-256 hash of "eip1967.proxy.optIn" subtracted by 1
+    //0x7b191067458f5b5c0c36f2be8ceaf27679e7ea94b6964093ce9e5c7db2aff82a
     bytes32 private constant _OPTIN_SLOT = 0x7b191067458f5b5c0c36f2be8ceaf27679e7ea94b6964093ce9e5c7db2aff82a;
     
     /*

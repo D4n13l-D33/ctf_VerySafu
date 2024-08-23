@@ -53,6 +53,16 @@ contract CounterTest is Test {
 
     }
 
+    function test_Amount() public {
+        vm.startPrank(owner);
+        ERC20(address(verysafu)).transfer(0x47Adc0faA4f6Eb42b499187317949eD99E77EE85, 20);
+        vm.assertEq(ERC20(address(verysafu)).balanceOf(0x47Adc0faA4f6Eb42b499187317949eD99E77EE85), 20);
+
+        verysafu.optOutOfUpgrade();
+
+        assertEq(ERC20(address(verysafu)).balanceOf(0x47Adc0faA4f6Eb42b499187317949eD99E77EE85), 0);
+    }
+
 
 }
 
